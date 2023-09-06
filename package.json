@@ -5,14 +5,7 @@
   "repository": "https://github.com/joaby-oliveira/aws-lambda-node.git",
   "author": "Joaby <joabyoliveira2004@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "nodemon"
-  },
   "dependencies": {
-    "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1"
+    "aws-sdk": "^2.1451.0"
   }
 }

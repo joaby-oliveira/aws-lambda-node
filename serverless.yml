@@ -1,0 +1,38 @@
+app: aws-node-project
+service: aws-node-project
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: sa-east-1
+
+functions:
+  publish:
+    handler: messages.publish
+    events:
+      - http:
+          path: /publish
+          method: post
+          cors: true
+  subscribe:
+    handler: messages.subscribe
+    events:
+      - http:
+          path: /subscribe
+          method: post
+          cors: true
+  unsubscribe:
+    handler: messages.unsubscribe
+    events:
+      - http:
+          path: /unsubscribe
+          method: post
+          cors: true
+  status:
+    handler: messages.status
+    events:
+      - http:
+          path: /status
+          method: post
+          cors: true
